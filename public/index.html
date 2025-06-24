@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Station Login & User State App</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: linear-gradient(to right, #f8f9fa, #e9ecef);
+        color: #333;
+      }
+      h1 {
+        text-align: center;
+        padding: 20px;
+        margin-top: 0;
+        background-color: #343a40;
+        color: #fff;
+      }
+      section {
+        background: #fff;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+      }
+      label {
+        font-weight: bold;
+      }
+      input,
+      select,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      #ws-connection-status {
+        margin-top: 10px;
+        font-style: italic;
+      }
+      #timerDisplay {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Station Login & User State App</h1>
+
+    <section id="auth-section">
+      <h2>Station Login</h2>
+      <form id="credentials">
+        <label for="access-token">Access Token:</label>
+        <input type="text" id="access-token" placeholder="Enter Access Token" />
+        <button type="submit" id="webexcc-register">Login</button>
+      </form>
+      <button id="webexcc-deregister" style="background-color: red">
+        Logout
+      </button>
+      <div id="ws-connection-status">Not Subscribed</div>
+    </section>
+
+    <script src="/bundle.js"></script>
+  </body>
+</html>
